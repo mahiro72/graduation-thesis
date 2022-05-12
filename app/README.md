@@ -25,7 +25,10 @@ docker-compose up -d --build
 ```
 
 
+## Data
+organizations
 
+現在は[](https://gitstar-ranking.com/)よりtop10を収集した
 
 
 ## reference

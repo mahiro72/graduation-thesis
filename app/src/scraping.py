@@ -1,4 +1,7 @@
 
+from cProfile import label
+
+
 class Scraping:
 
     headers = {
@@ -47,8 +50,9 @@ class Scraping:
             for repo in org_res:
                 repos.append({
                     'name': repo['full_name'],
-                    'url': repo['url']
+                    'url': repo['url'],
                 })
+
         return repos
 
 
@@ -83,11 +87,21 @@ class Scraping:
                 continue
 
             for issue in issue_res:
-                issues.append({
-                    'title': issue['title'],
-                    'body': issue['body'],
-                    # 'labels': issue['labels'],
-                })
+                labels = issue['labels']
+                if len(labels) == 0:
+                    issues.append({
+                        'title': issue['title'],
+                        'body': issue['body'],
+                        'label':None
+                    })
+                else:
+                    for label in labels:
+                        issues.append({
+                            'title': issue['title'],
+                            'body': issue['body'],
+                            'label':label
+                        })
+
 
         return issues
 
