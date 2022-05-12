@@ -26,7 +26,7 @@ class Scraping:
         import pandas as pd
         df = pd.DataFrame(data)
         df.to_csv(f'../data/{name}.csv')
-        print(f"Write csv success!\nCheck the data/{name} directory.\n")
+        print(f"Write {name}.csv success!\nCheck the data/{name} directory.\n")
 
 
     # リポジトリの取得
