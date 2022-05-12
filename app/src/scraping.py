@@ -1,7 +1,3 @@
-
-from cProfile import label
-
-
 class Scraping:
 
     headers = {
@@ -92,16 +88,17 @@ class Scraping:
                     issues.append({
                         'title': issue['title'],
                         'body': issue['body'],
-                        'label':None
+                        'label':None,
+                        'url':issue['html_url']
                     })
                 else:
                     for label in labels:
                         issues.append({
                             'title': issue['title'],
                             'body': issue['body'],
-                            'label':label
+                            'label':label['name'],
+                            'url':issue['html_url']
                         })
-
 
         return issues
 
