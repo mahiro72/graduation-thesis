@@ -1,4 +1,4 @@
-# GraduationThesis
+# graduation-thesis
 
 卒業論文用のリポジトリ
 
