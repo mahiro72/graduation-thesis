@@ -166,6 +166,8 @@ pythonやRなどのタグに対しての全体のLGTM数の推移を示す
 
 <br>
 
+<img width="600px" src="https://user-images.githubusercontent.com/70263039/174028157-e8c11ba2-cff8-434e-bc13-1f68a07789d8.png" />
+
 
 参考資料
 - [【時系列】時系列データ予測　予測手法マップ](https://qiita.com/sato235/items/48022d2bf023ecd5ceef)
